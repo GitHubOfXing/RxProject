@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">RxProject</string>
+
+    <string name="mainact_tab_main">首页</string>
+    <string name="mainact_tab_find">班级</string>
+    <string name="mainact_tab_chat">咨询</string>
+    <string name="mainact_tab_unnet">离线</string>
+    <string name="mainact_tab_mine">我的</string>
 </resources>

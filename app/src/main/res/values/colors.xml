@@ -6,4 +6,6 @@
 
     <color name="strip_background_tab_pressed">#35d48f</color>
     <color name="skin_global_bg_color">#35d48f</color>
+
+    <color name="main_bg_color">#35d48f</color>
 </resources>

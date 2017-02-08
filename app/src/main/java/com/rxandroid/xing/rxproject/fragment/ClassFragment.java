@@ -9,17 +9,16 @@ import android.view.ViewGroup;
 import com.rxandroid.xing.rxproject.R;
 
 import butterknife.ButterKnife;
-import butterknife.OnClick;
 
 /**
  * Created by li on 2016/3/23.
  */
-public class MainFragment extends BaseFragment {
+public class ClassFragment extends BaseFragment {
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_main, container,false);
+        View view = inflater.inflate(R.layout.fragment_class, container,false);
         ButterKnife.bind(this, view);
         return view;
     }
