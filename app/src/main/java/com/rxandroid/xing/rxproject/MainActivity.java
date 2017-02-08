@@ -27,7 +27,10 @@ public class MainActivity extends RxAppCompatActivity {
 
     private void initFragment() {
         getSupportFragmentManager().beginTransaction()
-                .replace(R.id.main_content, new MainFragment(), MainFragment.class.getName())
+                .add(R.id.main_tab_pager, new MainFragment(), MainFragment.class.getName())
+                .add(R.id.main_tab_pager, new MainFragment(), MainFragment.class.getName())
+                .add(R.id.main_tab_pager, new MainFragment(), MainFragment.class.getName())
+                .add(R.id.main_tab_pager, new MainFragment(), MainFragment.class.getName())
                 .commit();
     }
 }

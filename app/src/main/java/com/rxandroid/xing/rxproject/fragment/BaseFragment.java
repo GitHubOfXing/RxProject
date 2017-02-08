@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.rxandroid.xing.rxproject.R;
+import com.trello.rxlifecycle.components.support.RxFragment;
 
 import butterknife.ButterKnife;
 
@@ -15,14 +16,12 @@ import butterknife.ButterKnife;
  * 主菜单Fragment
  * Created by ljb on 2016/3/23.
  */
-public class BaseFragment extends Fragment {
+public class BaseFragment extends RxFragment {
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_main, null);
-
-        ButterKnife.bind(this, view);
         return view;
     }
 
@@ -32,7 +31,7 @@ public class BaseFragment extends Fragment {
     }
 
     /**
-     * 开启新的Fragment
+     * open the new Fragment
      */
     private void open(Fragment fragment) {
         final String tag = fragment.getClass().toString();
