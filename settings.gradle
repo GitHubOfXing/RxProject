@@ -1,1 +1,6 @@
-include ':app'
+include ':app', ':basebean', ':httprequest'
+
+//环境配置 release 正式环境    test 测试环境   beta 预发布环境 other 其他环境
+if (!System.properties['api_env']) {
+    System.properties['api_env'] = 'test'
+}
