@@ -2,12 +2,12 @@ package com.http.request.utils;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
-
 import com.http.request.RxRetrofitApp;
+import com.http.request.db.CookieResulteDao;
+import com.http.request.db.DaoMaster;
+import com.http.request.db.DaoSession;
 import com.http.request.http.cookie.CookieResulte;
-
 import org.greenrobot.greendao.query.QueryBuilder;
-
 import java.util.List;
 
 /**
