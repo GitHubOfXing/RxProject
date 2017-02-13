@@ -90,9 +90,9 @@ public class AdvanceViewPager extends ViewPager
              * x偏移量： 如果手指从右到左的滑动（切换到后一个）：0-720 如果手指从左到右的滑动（切换到前一个）：720-0 
              */  
             mTrans = -getWidth() - getPageMargin() + positionOffsetPixels;  
-            ViewHelper.setScaleX(right, mScale);  
+            /*ViewHelper.setScaleX(right, mScale);
             ViewHelper.setScaleY(right, mScale);  
-            ViewHelper.setTranslationX(right, mTrans);  
+            ViewHelper.setTranslationX(right, mTrans);  */
         }  
         if (left != null)  
         {  

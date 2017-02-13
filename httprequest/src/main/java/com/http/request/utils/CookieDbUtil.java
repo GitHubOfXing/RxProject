@@ -2,7 +2,7 @@ package com.http.request.utils;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
-import com.http.request.RxRetrofitApp;
+import com.http.request.RxRequestContext;
 import com.http.request.db.CookieResulteDao;
 import com.http.request.db.DaoMaster;
 import com.http.request.db.DaoSession;
@@ -24,7 +24,7 @@ public class CookieDbUtil {
 
 
     public CookieDbUtil() {
-        context= RxRetrofitApp.getApplication();
+        context= RxRequestContext.getApplication();
         openHelper = new DaoMaster.DevOpenHelper(context, dbName);
     }
 

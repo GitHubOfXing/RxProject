@@ -1,12 +1,12 @@
 package com.http.request.download;
 
-import com.wzgiceman.rxretrofitlibrary.retrofit_rx.download.DownLoadListener.DownloadInterceptor;
-import com.wzgiceman.rxretrofitlibrary.retrofit_rx.exception.HttpTimeException;
-import com.wzgiceman.rxretrofitlibrary.retrofit_rx.exception.RetryWhenNetworkException;
-import com.wzgiceman.rxretrofitlibrary.retrofit_rx.subscribers.ProgressDownSubscriber;
-import com.wzgiceman.rxretrofitlibrary.retrofit_rx.utils.AppUtil;
-import com.wzgiceman.rxretrofitlibrary.retrofit_rx.utils.DbDownUtil;
-
+import com.http.request.download.DownLoadListener.DownloadInterceptor;
+import com.http.request.exception.HttpTimeException;
+import com.http.request.exception.RetryWhenNetworkException;
+import com.http.request.subscribers.ProgressDownSubscriber;
+import com.http.request.utils.AppUtil;
+import com.http.request.utils.DbDownUtil;
+import rx.android.schedulers.AndroidSchedulers;
 import java.io.File;
 import java.io.IOException;
 import java.util.HashMap;
@@ -19,7 +19,6 @@ import okhttp3.ResponseBody;
 import retrofit2.Retrofit;
 import retrofit2.adapter.rxjava.RxJavaCallAdapterFactory;
 import retrofit2.converter.gson.GsonConverterFactory;
-import rx.android.schedulers.AndroidSchedulers;
 import rx.functions.Func1;
 import rx.schedulers.Schedulers;
 

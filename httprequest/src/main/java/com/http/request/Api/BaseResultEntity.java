@@ -6,33 +6,33 @@ package com.http.request.Api;
  */
 public class BaseResultEntity<T> {
     //  判断标示
-    private int ret;
+    private int state;
     //    提示信息
-    private String msg;
+    private String stateInfo;
     //显示数据（用户需要关心的数据）
-    private T data;
+    private T resInfo;
 
     public String getMsg() {
-        return msg;
+        return stateInfo;
     }
 
     public void setMsg(String msg) {
-        this.msg = msg;
+        this.stateInfo = msg;
     }
 
     public T getData() {
-        return data;
+        return resInfo;
     }
 
     public void setData(T data) {
-        this.data = data;
+        this.resInfo = data;
     }
 
     public int getRet() {
-        return ret;
+        return state;
     }
 
     public void setRet(int ret) {
-        this.ret = ret;
+        this.state = ret;
     }
 }

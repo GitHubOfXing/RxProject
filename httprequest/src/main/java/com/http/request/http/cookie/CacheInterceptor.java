@@ -1,7 +1,7 @@
 package com.http.request.http.cookie;
 
-import com.wzgiceman.rxretrofitlibrary.retrofit_rx.RxRetrofitApp;
-import com.wzgiceman.rxretrofitlibrary.retrofit_rx.utils.AppUtil;
+import com.http.request.RxRequestContext;
+import com.http.request.utils.AppUtil;
 
 import java.io.IOException;
 
@@ -21,14 +21,14 @@ public class CacheInterceptor implements Interceptor {
     public Response intercept(Chain chain) throws IOException {
         Request request = chain.request();
 
-        if (!AppUtil.isNetworkAvailable(RxRetrofitApp.getApplication())) {//没网强制从缓存读取(必须得写，不然断网状态下，退出应用，或者等待一分钟后，就获取不到缓存）
+        if (!AppUtil.isNetworkAvailable(RxRequestContext.getApplication())) {//没网强制从缓存读取(必须得写，不然断网状态下，退出应用，或者等待一分钟后，就获取不到缓存）
             request = request.newBuilder()
                     .cacheControl(CacheControl.FORCE_CACHE)
                     .build();
         }
         Response response = chain.proceed(request);
         Response responseLatest;
-        if (AppUtil.isNetworkAvailable(RxRetrofitApp.getApplication())) {
+        if (AppUtil.isNetworkAvailable(RxRequestContext.getApplication())) {
             int maxAge = 60; //有网失效一分钟
             responseLatest = response.newBuilder()
                     .removeHeader("Pragma")

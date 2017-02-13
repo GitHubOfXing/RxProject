@@ -26,7 +26,7 @@ public abstract class BaseApi<T> implements Func1<BaseResultEntity<T>, T> {
     /*是否需要缓存处理*/
     private boolean cache;
     /*基础url*/
-    private  String baseUrl="http://www.izaodao.com/Api/";
+    private  String baseUrl="http://api.duia.com/duiaApp/";
     /*方法-如果需要缓存必须设置这个参数；不需要不用設置*/
     private String mothed;
     /*超时时间-默认6秒*/
@@ -143,7 +143,7 @@ public abstract class BaseApi<T> implements Func1<BaseResultEntity<T>, T> {
 
     @Override
     public T call(BaseResultEntity<T> httpResult) {
-        if (httpResult.getRet() == 0) {
+        if (httpResult.getRet() == -1) {
             throw new HttpTimeException(httpResult.getMsg());
         }
         return httpResult.getData();

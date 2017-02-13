@@ -3,11 +3,11 @@ package com.http.request.utils;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 
-import com.wzgiceman.rxretrofitlibrary.retrofit_rx.RxRetrofitApp;
-import com.wzgiceman.rxretrofitlibrary.retrofit_rx.download.DaoMaster;
-import com.wzgiceman.rxretrofitlibrary.retrofit_rx.download.DaoSession;
-import com.wzgiceman.rxretrofitlibrary.retrofit_rx.download.DownInfo;
-import com.wzgiceman.rxretrofitlibrary.retrofit_rx.download.DownInfoDao;
+import com.http.request.RxRequestContext;
+import com.http.request.db.DaoMaster;
+import com.http.request.db.DaoSession;
+import com.http.request.db.DownInfoDao;
+import com.http.request.download.DownInfo;
 
 import org.greenrobot.greendao.query.QueryBuilder;
 
@@ -28,7 +28,7 @@ public class DbDownUtil {
 
 
     public DbDownUtil() {
-        context= RxRetrofitApp.getApplication();
+        context= RxRequestContext.getApplication();
         openHelper = new DaoMaster.DevOpenHelper(context, dbName, null);
     }
 

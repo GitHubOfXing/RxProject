@@ -6,7 +6,7 @@ import android.content.DialogInterface;
 import android.widget.Toast;
 
 import com.http.request.Api.BaseApi;
-import com.http.request.RxRetrofitApp;
+import com.http.request.RxRequestContext;
 import com.http.request.exception.HttpTimeException;
 import com.http.request.http.cookie.CookieResulte;
 import com.http.request.listener.HttpOnNextListener;
@@ -110,7 +110,7 @@ public class ProgressSubscriber<T> extends Subscriber<T> {
     public void onStart() {
         showProgressDialog();
         /*缓存并且有网*/
-        if (api.isCache() && AppUtil.isNetworkAvailable(RxRetrofitApp.getApplication())) {
+        if (api.isCache() && AppUtil.isNetworkAvailable(RxRequestContext.getApplication())) {
              /*获取缓存数据*/
             CookieResulte cookieResulte = CookieDbUtil.getInstance().queryCookieBy(api.getUrl());
             if (cookieResulte != null) {

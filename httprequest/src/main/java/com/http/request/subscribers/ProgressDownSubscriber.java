@@ -1,12 +1,12 @@
 package com.http.request.subscribers;
 
 
-import com.wzgiceman.rxretrofitlibrary.retrofit_rx.download.DownInfo;
-import com.wzgiceman.rxretrofitlibrary.retrofit_rx.download.DownLoadListener.DownloadProgressListener;
-import com.wzgiceman.rxretrofitlibrary.retrofit_rx.download.DownState;
-import com.wzgiceman.rxretrofitlibrary.retrofit_rx.download.HttpDownManager;
-import com.wzgiceman.rxretrofitlibrary.retrofit_rx.listener.HttpDownOnNextListener;
-import com.wzgiceman.rxretrofitlibrary.retrofit_rx.utils.DbDownUtil;
+import com.http.request.download.DownInfo;
+import com.http.request.download.DownLoadListener.DownloadProgressListener;
+import com.http.request.download.DownState;
+import com.http.request.download.HttpDownManager;
+import com.http.request.listener.HttpDownOnNextListener;
+import com.http.request.utils.DbDownUtil;
 
 import java.lang.ref.SoftReference;
 

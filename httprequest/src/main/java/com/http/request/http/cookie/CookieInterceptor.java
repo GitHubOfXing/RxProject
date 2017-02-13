@@ -1,6 +1,6 @@
 package com.http.request.http.cookie;
 
-import com.wzgiceman.rxretrofitlibrary.retrofit_rx.utils.CookieDbUtil;
+import com.http.request.utils.CookieDbUtil;
 
 import java.io.IOException;
 import java.nio.charset.Charset;

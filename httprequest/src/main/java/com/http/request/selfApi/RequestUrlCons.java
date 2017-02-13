@@ -1,4 +1,4 @@
-package com.rxandroid.xing.rxproject.net;
+package com.http.request.selfApi;
 
 public class RequestUrlCons {
 
