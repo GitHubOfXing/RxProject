@@ -1,49 +1,30 @@
-package com.rxandroid.xing.rxproject.fragment;
-
-import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
-import android.util.Log;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
+package com.rxandroid.xing.rxproject;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import com.http.request.Api.BaseResultEntity;
 import com.http.request.listener.HttpOnNextListener;
 import com.http.request.utils.DevLog;
-import com.rxandroid.xing.rxproject.R;
-import com.trello.rxlifecycle.components.support.RxFragment;
+import com.http.request.utils.RxBus;
+import com.trello.rxlifecycle.components.support.RxAppCompatActivity;
 
 import java.util.List;
 
-import butterknife.ButterKnife;
 
-/**
- * Created by li on 2016/3/23.
- */
-public class BaseFragment extends RxFragment {
+public class BaseActivity extends RxAppCompatActivity {
 
-    @Override
-    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
-        super.onActivityCreated(savedInstanceState);
+    private RxBus _rxBus;
+
+
+    /**获取RxBus对象*/
+    public RxBus getRxBusSingleton() {
+        if (_rxBus == null) {
+            _rxBus = new RxBus();
+        }
+        return _rxBus;
     }
 
-    /**
-     * open the new Fragment
-     */
-    private void open(Fragment fragment) {
-        final String tag = fragment.getClass().toString();
-        getActivity().getSupportFragmentManager()
-                .beginTransaction()
-                .addToBackStack(tag)
-                .replace(R.id.main_content, fragment, tag)
-                .commit();
-    }
-
-    //   回调一一对应
-    HttpOnNextListener OnNextListener = new HttpOnNextListener<List<Object>>() {
+    protected HttpOnNextListener OnNextListener = new HttpOnNextListener<List<Object>>() {
         /**
          * 网络返回
          * @param subjects
@@ -101,5 +82,4 @@ public class BaseFragment extends RxFragment {
     public void onNetError(Throwable e) {
 
     }
-
 }

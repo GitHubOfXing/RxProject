@@ -5,6 +5,9 @@ import android.app.Application;
 import android.content.Context;
 import android.os.Bundle;
 import android.util.Log;
+
+import com.duia.onlineconfig.api.OnlineConfigAgent;
+import com.facebook.drawee.backends.pipeline.Fresco;
 import com.http.request.RxRequestContext;
 
 /**
@@ -30,6 +33,12 @@ public class DuiaApp extends Application implements Application.ActivityLifecycl
     public void onCreate() {
         super.onCreate();
         RxRequestContext.init(this);
+        Fresco.initialize(this);
+        OnlineConfigAgent onlineConfig = OnlineConfigAgent.getInstance();
+        //更新参数到本地
+        //可以选择添加回调OnlineConfigAgent.OnlineConfigListener()
+        //失败返回null 成功返回Key Value 的Map集合
+        onlineConfig.updateOnlineConfig(this);
         registerActivityLifecycleCallbacks(this);
     }
 

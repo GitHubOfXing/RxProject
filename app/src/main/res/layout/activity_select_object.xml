@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f1f1f1"
+    android:id="@+id/rl_select"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:id="@+id/layout_app_title"
+        android:background="@color/main_bg_color">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/subject_title_color"
+            android:layout_centerInParent="true"
+            android:textSize="18sp"
+            android:text="选择分类"
+            android:textColor="@android:color/white"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_below="@id/layout_app_title"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/ll_errorNet"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:id="@+id/iv_net_error"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="110dp"
+            android:src="@drawable/konglong"/>
+
+        <LinearLayout
+            android:id="@+id/act_refresh_submit"
+            android:layout_width="match_parent"
+            android:layout_marginTop="30dp"
+            android:layout_below="@id/iv_net_error"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="60dip"
+            android:layout_marginRight="60dip"
+            android:background="@color/new_green_font"
+            android:gravity="center"
+            android:padding="10dip">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dip"
+                android:layout_marginTop="1dip"
+                android:text="刷新"
+                android:textColor="@android:color/white"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/sv_select"
+        android:layout_below="@id/layout_app_title"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        >
+        <LinearLayout
+            android:id="@+id/ll_college"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="15dp"
+            android:orientation="vertical">
+
+        </LinearLayout>
+    </ScrollView>
+    <RelativeLayout
+        android:id="@+id/rl_signImage"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="10dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        >
+        <ImageView
+            android:id="@+id/iv_makesign"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:visibility="gone"
+            android:layout_centerInParent="true"
+            android:src="@drawable/sku_select_down"/>
+        <ImageView
+            android:id="@+id/iv_upmakesign"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerInParent="true"
+            android:src="@drawable/sku_select_up"/>
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -8,7 +8,7 @@ import android.graphics.Paint;
 import android.util.AttributeSet;
 import android.view.View;
 
-import com.rxandroid.xing.rxproject.util.DisplayUtils;
+import com.http.request.utils.DisplayUtils;
 
 
 public class AdvanceTitleView extends View {

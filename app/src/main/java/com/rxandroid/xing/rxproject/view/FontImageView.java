@@ -2,15 +2,12 @@
 package com.rxandroid.xing.rxproject.view;
 
 import android.content.Context;
-import android.content.res.TypedArray;
-import android.graphics.drawable.Drawable;
 import android.util.AttributeSet;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.rxandroid.xing.rxproject.R;
-import com.rxandroid.xing.rxproject.util.DisplayUtils;
+import com.http.request.utils.DisplayUtils;
 
 
 public class FontImageView extends LinearLayout {

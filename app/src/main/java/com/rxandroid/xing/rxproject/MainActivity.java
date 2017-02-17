@@ -11,21 +11,16 @@ import android.widget.ImageView;
 import android.widget.TabHost;
 import android.widget.TabWidget;
 import android.widget.TextView;
-
 import com.rxandroid.xing.rxproject.adapter.FragmentTabAdapter;
 import com.rxandroid.xing.rxproject.fragment.BaseFragment;
 import com.rxandroid.xing.rxproject.fragment.ClassFragment;
 import com.rxandroid.xing.rxproject.fragment.MainFragment;
-import com.rxandroid.xing.rxproject.util.RxBus;
-import com.trello.rxlifecycle.components.support.RxAppCompatActivity;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
 
 
-public class MainActivity extends RxAppCompatActivity implements ViewPager.OnPageChangeListener, TabHost.OnTabChangeListener {
-
-    private RxBus _rxBus;
+public class MainActivity extends BaseActivity implements ViewPager.OnPageChangeListener, TabHost.OnTabChangeListener {
 
     private BaseFragment fragmentArray[] = {
             new MainFragment(),
@@ -47,14 +42,6 @@ public class MainActivity extends RxAppCompatActivity implements ViewPager.OnPag
     FragmentTabHost mTabHost;
     @Bind(R.id.main_tab_pager)
     ViewPager main_tab_pager;
-
-    /**获取RxBus对象*/
-    public RxBus getRxBusSingleton() {
-        if (_rxBus == null) {
-            _rxBus = new RxBus();
-        }
-        return _rxBus;
-    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

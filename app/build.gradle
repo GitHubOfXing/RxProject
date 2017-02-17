@@ -26,8 +26,16 @@ android {
     }
 }
 
+repositories {
+    flatDir {
+        dirs 'libs'
+    }
+}
+
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     compile 'com.jakewharton:butterknife:7.0.1'
     compile project(':httprequest')
+    compile(name: 'welcome_banner-1.1.2', ext: 'aar')
+    compile(name: 'duia.online_config-1.1.6', ext: 'aar')
 }

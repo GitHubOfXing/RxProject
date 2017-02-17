@@ -2,11 +2,9 @@ package com.rxandroid.xing.rxproject.net;
 
 import android.net.Uri;
 
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
+import com.http.request.utils.DevLog;
 import com.rxandroid.xing.rxproject.BuildConfig;
 import com.rxandroid.xing.rxproject.net.interceptor.DuiaLogInterceptor;
-import com.rxandroid.xing.rxproject.util.DevLog;
 import com.squareup.okhttp.Callback;
 import com.squareup.okhttp.MediaType;
 import com.squareup.okhttp.MultipartBuilder;

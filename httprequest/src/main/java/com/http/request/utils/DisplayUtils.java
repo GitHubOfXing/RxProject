@@ -1,4 +1,4 @@
-package com.rxandroid.xing.rxproject.util;
+package com.http.request.utils;
 
 import android.app.Activity;
 import android.content.Context;

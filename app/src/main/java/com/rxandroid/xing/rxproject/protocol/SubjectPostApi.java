@@ -2,6 +2,7 @@ package com.rxandroid.xing.rxproject.protocol;
 
 import com.http.request.Api.BaseApi;
 import com.http.request.listener.HttpOnNextListener;
+import com.http.request.selfApi.RequestUrlCons;
 import com.http.request.selfApi.RestApi;
 import com.trello.rxlifecycle.components.support.RxAppCompatActivity;
 import retrofit2.Retrofit;
@@ -27,7 +28,7 @@ public class SubjectPostApi extends BaseApi {
         setShowProgress(true);
         setCancel(true);
         setCache(true);
-        setMothed("getSKUListChilds");
+        setMothed(RequestUrlCons.GETSKULISTCHILD_POST_URL);
         setCookieNetWorkTime(60);
         setCookieNoNetWorkTime(24*60*60);
     }
